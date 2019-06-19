@@ -1,7 +1,9 @@
 $(document).ready(function(){
-  $(".btn-outline-secondary").click(function(){
+	
+
+	$(".btn-outline-secondary").click(function(){
 	  let searchText = $("input").val();
-    var xhr = $.get("http://api.giphy.com/v1/gifs/random?tag="+ searchText +"&api_key=yJspXO0cdlYjEVqEGdLCUCxhgU7WJGpv");
+	  var xhr = $.get("http://api.giphy.com/v1/gifs/random?tag="+ searchText +"&api_key=yJspXO0cdlYjEVqEGdLCUCxhgU7WJGpv");
 	
     
 		xhr.done(function(data) { 		
@@ -30,28 +32,8 @@ $(document).ready(function(){
 			  $(".btn-outline-info").removeClass("invisible");
 			  $("#gifURLinfo").html(obj);
 			  
-			  var info {
-				  "id"::
-				  "url":
-				  "url_mp4":
-				  "search":
-			  }
-			  
-			  $.ajax({
-			        type: "POST",
-			        url: "/saveInfo/gif",
-			        data: info,
-			        contentType: "application/json; charset=utf-8",
-			        dataType: "json",
-			        success: function(data){alert();},
-			        failure: function(errMsg) {
-			            alert(errMsg);
-			        }
-			  });
 		});
-	  
-		
-	  
+	  	  
 	  
 	});
 	 $(".btn-giveURL").click(function(){
@@ -66,6 +48,3 @@ $(document).ready(function(){
 		 
 	    });
 });
-
-//SELECT 
-TIP_REG_TC_RESULT
