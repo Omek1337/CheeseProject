@@ -18,21 +18,23 @@ public class UrlDataController {
 	private DataUrlRepository dataUrlRepository;
 	
 	@GetMapping(path="/addData")
-	public @ResponseBody String getAllData (@RequestParam String url,
+	public @ResponseBody String  getAllData (@RequestParam String url,
 											@RequestParam String url_mp4,
 											@RequestParam String searchTag) {
-		UrlData d = new UrlData();
+		UrlData d = new UrlData(0, url, url_mp4, searchTag);
 		
 		d.setUrl(url);
 		d.setUrl_mp4(url_mp4);
 		d.setSearchTag(searchTag);
 		
 		dataUrlRepository.save(d);
-		
-		return "All done b*tch!";
+		return "{}";
 	}
 	@GetMapping(path="/allData")
-	public @ResponseBody Iterable<UrlData> getAllData() {
-		return dataUrlRepository.findAll();
+	public @ResponseBody Object getAllData() {
+		Object a  = dataUrlRepository.findAll();
+		return a;
 	}
+	
+	
 }
