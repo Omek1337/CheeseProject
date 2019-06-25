@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-
+var lol = "";
 	$(".btn-outline-secondary").click(function(){
 	  let searchText = $("input").val();
 	  var xhr = $.get("http://api.giphy.com/v1/gifs/random?tag="+ searchText +"&api_key=yJspXO0cdlYjEVqEGdLCUCxhgU7WJGpv");
@@ -32,6 +32,9 @@ $(document).ready(function(){
 			  $(".btn-outline-info").removeClass("invisible");
 			  $("#gifURLinfo").html(obj);
 			  
+			 lol = "http://localhost:8080/cheese/addData?url="+ obj +"&url_mp4="+ mp4new +"&searchTag="+ searchText;
+			 
+			 return lol;
 		});
 	  	  
 	  
@@ -46,5 +49,14 @@ $(document).ready(function(){
 	  
 	 $(".getmp4").click(function () {
 		 
-	    });
+	  });
+	 
+	 $(".saveInDB").click(function () {
+		 console.log(lol);
+		 var xhr = $.get(lol);
+		  xhr.done(function(data){
+			  console.log(data);
+		  })
+	  });
+	 
 });

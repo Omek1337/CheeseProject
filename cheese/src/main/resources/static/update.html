@@ -19,34 +19,24 @@
 		</div>
 	</header>
 	<main role="main" class="inner cover">
-        <h1 class="cover-heading">Get your GIF now.</h1>
-        <p class="lead">Hello friend. This app is made to download GIF images right into your directory. Just write something in search input and find one.</p>
-			<div class="input-group mb-3">
-				<input type="text" class="form-control" placeholder="Search" aria-label="Search for a gif" aria-describedby="button-addon2">
-				<div class="input-group-append">
-					 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Get GIF</button>
-				</div>
+			<h2>You can update any <b>data</b> here!</h2>
+			<div>
+				<form>
+				  <div class="form-group">
+				    <input type="text" class="form-control" id="dataId" placeholder="Id of data item">
+				  </div>
+				  <div class="form-group">
+				    <input type="text" class="form-control" id="dataUrl" placeholder="GIF url">
+				  </div>
+				  <div class="form-group">
+				    <input type="text" class="form-control" id="dataUrl_mp4" placeholder="GIF_MP4 url">
+				  </div>
+				  <div class="form-group">
+				    <input type="text" class="form-control" id="DataTag" placeholder="Wort, dass Sie gesucht haben">
+				  </div>
+				</form>
 			</div>
-			
-						
-					<div class="col-12 gifcontent">
-						
-					</div>
-				
-			<row>
-				<button class= "btn btn-outline-info btn-giveURL invisible">Get URL</button>
-				<button class= "btn btn-outline-info saveInDB invisible">Save in DB</button>
-				<a id="lol" target="_blank">
-					<button class= "btn btn-outline-info float-right getmp4 invisible">Proceed to get MP4</button>
-				</a>
-			</row>
-			<div class="alert alert-info alert-dismissible fade show invisible" role="alert">
-				<span id= "gifURLinfo"></span>
-			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			  </button>
-			</div>
-			
+			<button>Get all Data</button>>
       </main>
 
       <footer class="mastfoot mt-auto">
