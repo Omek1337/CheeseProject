@@ -22,12 +22,14 @@ public class UrlDataController {
 	@GetMapping(path="/addData")
 	public @ResponseBody String  getAllData (@RequestParam String url,
 											@RequestParam String url_mp4,
-											@RequestParam String searchTag) {
-		UrlData d = new UrlData(0, url, url_mp4, searchTag);
+											@RequestParam String searchTag,
+											@RequestParam String userName) {
+		UrlData d = new UrlData(0, url, url_mp4, searchTag, userName);
 		
 		d.setUrl(url);
 		d.setUrl_mp4(url_mp4);
 		d.setSearchTag(searchTag);
+		d.setUserName(userName);
 		
 		dataUrlRepository.save(d);
 		return "{}";
@@ -55,13 +57,14 @@ public class UrlDataController {
 	public void updateData( @RequestParam long id,
 							@RequestParam String url,
 							@RequestParam String url_mp4,
-							@RequestParam String searchTag) {
+							@RequestParam String searchTag,
+							@RequestParam String userName) {
 		
-		UrlData d = new UrlData(id, url, url_mp4, searchTag);
-		
+		UrlData d = new UrlData(id, url, url_mp4, searchTag, userName);
 		d.setUrl(url);
 		d.setUrl_mp4(url_mp4);
 		d.setSearchTag(searchTag);
+		d.setUserName(userName);
 		
 		dataUrlRepository.save(d);
 	}

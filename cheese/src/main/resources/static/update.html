@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="style.css">
 	
   </head>
-  <body class "text-center">
-	<div class="cover-container d-flex h-50 p-3 mx-auto flex-column">
+  <body>
+	<div class="cover-container d-flex h-50 p-3 mx-auto flex-column text-center">
 	<header class ="masthead mb-auto">
 		<div class = "inner">
 			<h3 class = "masthead-brand">GetGIF</h3>
 			<nav class="nav nav-masthead justify-content-center">
-				<a class="nav-link active" href="/index.html">Home</a>
-				<a class="nav-link" href="/update.html">Update</a>
-				<a class="nav-link" href="#">Delete</a>
+				<a class="nav-link" href="/index.html">Home</a>
+				<a class="nav-link active" href="/update.html">Update and Delete</a>
 			</nav>
 		</div>
 	</header>
@@ -22,8 +21,9 @@
 			<h2>You can update any <b>data</b> here!</h2>
 			<div>
 				<form>
-				  <div class="form-group">
-				    <input type="text" class="form-control" id="dataId" placeholder="Id of data item">
+				  <div class="form-group input-inline">
+				    <input type="text" class="form-control" id="dataId" placeholder="Id of data item">				
+				  	<input type="text" class="form-control" id="dataUserName" placeholder="Name of person">
 				  </div>
 				  <div class="form-group">
 				    <input type="text" class="form-control" id="dataUrl" placeholder="GIF url">
@@ -32,25 +32,39 @@
 				    <input type="text" class="form-control" id="dataUrl_mp4" placeholder="GIF_MP4 url">
 				  </div>
 				  <div class="form-group">
-				    <input type="text" class="form-control" id="DataTag" placeholder="Wort, dass Sie gesucht haben">
+				    <input type="text" class="form-control" id="dataTag" placeholder="Wort, dass Sie gesucht haben">
+				  </div>
+				  <div class="buttons">
+				  	<button type="button" class="form-control btn btn-outline-primary btn-put">Update data</button>
+				  	<button type="button" class="form-control btn btn-outline-primary btn-table">Restart table</button>
+				  </div>
+				  <div class="form-group">
+				  	<input type="text" class="form-control form-delete" id="inputIdDelete" placeholder="Enter ID">
+				  	<button type="button" class="form-control btn btn-outline-danger form-delete">Delete data</button>
 				  </div>
 				</form>
 			</div>
-			<button>Get all Data</button>>
-      </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-			<div class="footer-copyright text-center py-3">© 2019 Copyright:
-				<p>App for Kirill</a>, by <a href="https://media1.giphy.com/media/l1J3r8woEv9ylrPGg/giphy.gif?cid=790b76115d0367e04c63384c733e4e35&rid=giphy.gif">@yourmom</a>.</p>
-			</div>
-        </div>
-      </footer>
-	
-	
+      </main>	
   </div>
+  <br>
+  <div class="tabledata">
+	   		<table class="table table-bordered table-dark table-hover">
+	   			<thead>
+	    			<tr>
+	    				<th>ID</th>
+	    				<th>URL</th>
+	    				<th>URL_MP4</th>
+	    				<th>SEARCH_TAG</th>
+	    				<th>USER_NAME</th>
+	    			</tr>
+	   			</thead>
+	   			<tbody>
+	   			
+	   			</tbody>
+	   		</table>
+	   	</div> 	 	
 	<script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="script.js"></script>
+	<script src="update_script.js"></script>
   </body>
 </html>
 

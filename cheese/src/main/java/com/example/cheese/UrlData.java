@@ -5,8 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SecondaryTable;
+import javax.persistence.Table;
 
 @Entity  // This tells Hibernate to make a table out of this class
+@Table(name = "url_data")
+@SecondaryTable(name = "user_data")
 public class UrlData {
 	
 	@Id
@@ -24,20 +28,34 @@ public class UrlData {
 	@Column(name = "searchTag")
 	private String searchTag;
 	
-	
+	@Column(table = "user_data", name = "userName")
+	private String userName;
 	public UrlData() {
 	
 	}
 	
 
 
-	public UrlData(long id, String url, String url_mp4, String searchTag) {
+	public UrlData(long id, String url, String url_mp4, String searchTag, String userName) {
 		// TODO Auto-generated constructor stub
 		this.id = id;
 		this.url = url;
 		this.url_mp4 = url_mp4;
 		this.searchTag = searchTag;
+		this.userName = userName;
 	}
+
+
+	public String getUserName() {
+		return userName;
+	}
+
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
 
 
 	public long getId() {

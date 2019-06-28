@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	
+	$(".tabledata").css({"display": "block"});	
 var lol = "";
 	$(".btn-outline-secondary").click(function(){
-	  let searchText = $("input").val();
+	  let searchText = $(".input-tag").val();
 	  var xhr = $.get("http://api.giphy.com/v1/gifs/random?tag="+ searchText +"&api_key=yJspXO0cdlYjEVqEGdLCUCxhgU7WJGpv");
 	
     
@@ -20,9 +20,7 @@ var lol = "";
 				var res2 = mp4obj.slice(pos2,mp4obj.length);
 				
 				let mp4new= res1 + "i" + res2;
-				console.log(pos1);
-				console.log(pos2);
-				console.log(mp4new);
+				
 				$("#lol").attr("href",mp4new);
 				
 				
@@ -32,7 +30,9 @@ var lol = "";
 			  $(".btn-outline-info").removeClass("invisible");
 			  $("#gifURLinfo").html(obj);
 			  
-			 lol = "http://localhost:8080/cheese/addData?url="+ obj +"&url_mp4="+ mp4new +"&searchTag="+ searchText;
+			  let userName = $(".input-name").val();
+			  
+			 lol = "http://localhost:8080/cheese/addData?url="+ obj +"&url_mp4="+ mp4new +"&searchTag="+ searchText+ "&userName=" + userName;
 			 
 			 return lol;
 		});
