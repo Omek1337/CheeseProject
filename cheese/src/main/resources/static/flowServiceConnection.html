@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+	
+  </head>
+  <body class= "text-center">
+	<div class="cover-container d-flex h-50 p-3 mx-auto flex-column">
+	<header class ="masthead mb-auto">
+		<div class = "inner">
+			<h3 class = "masthead-brand">GetGIF</h3>
+			<nav class="nav nav-masthead justify-content-center">
+				<a class="nav-link" href="/index.html">Home</a>
+				<a class="nav-link" href="/update.html">Update and Delete</a>
+				<a class="nav-link active" href="/flowServiceConnection.html">webMethods</a>
+			</nav>
+		</div>
+	</header>
+	<main role="main" class="inner cover container">
+        <div class="row text-center">
+        	<div class="col">
+	        	<h1 class="cover-heading">Get response from webMethods.</h1>
+	        	<p id="greeting"></p>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" id="name-input" placeholder="Please enter your name" aria-label="Recipient's name" aria-describedby="button-addon2">
+				</div>
+				<button class="btn btn-outline-secondary" type="button" id="btn-send-flow-request">
+					<h3>PUSH ME</h3>
+					<img src="https://pbs.twimg.com/profile_images/653700295395016708/WjGTnKGQ_400x400.png">
+				</button>
+			</div>
+			<div class="col-3"></div>
+        </div>
+		<div class="content row">
+				
+		</div>						
+    </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+			<div class="footer-copyright text-center py-3">(c) 2019 Copyright:
+				<p>App for Kirill</a>, by <a href="https://media1.giphy.com/media/l1J3r8woEv9ylrPGg/giphy.gif?cid=790b76115d0367e04c63384c733e4e35&rid=giphy.gif">@yourmom</a>.</p>
+			</div>
+        </div>
+      </footer>
+	
+	
+  </div>
+	<script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="flowServiceRequest.js"></script>
+  </body>
+</html>

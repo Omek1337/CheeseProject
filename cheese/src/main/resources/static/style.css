@@ -1,8 +1,12 @@
+
+
 body {
 	margin:0;
 	background-color: #c5d8f7;
 	flex-direction: column;
 }
+
+
 
 .navbar {
 
@@ -158,11 +162,7 @@ img {
 	position: relative;
     left: 0;
 }
-.tabledata {
-	display:block;
-	width:100%;
-	left:0;
-}
+
 
 h2 {
 	margin-top:1em;
@@ -196,4 +196,25 @@ h2 {
 
 .input-inline {
 	display:flex;
+}
+
+.cool-text {
+  text-align: center;
+  font-size: 20px;
+}
+.btn-success, .btn-warning {
+	width: 3em;
+}
+input {
+	position : absolute;
+	display:flex;
+	width: 25em;
+}
+
+.tttable {
+    width: 100%;
+}
+
+.small-input {
+	width: 6em;
 }
