@@ -10,6 +10,7 @@ import javax.persistence.Table;
 
 @Entity  // This tells Hibernate to make a table out of this class
 @Table(name = "url_data")
+@SecondaryTable(name = "user_data")
 public class UrlData {
 	
 	@Id
@@ -27,7 +28,7 @@ public class UrlData {
 	@Column(name = "searchTag")
 	private String searchTag;
 	
-	@Column(name = "userName")
+	@Column(table = "user_data", name = "userName")
 	private String userName;
 	public UrlData() {
 	
